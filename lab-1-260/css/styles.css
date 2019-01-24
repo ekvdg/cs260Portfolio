@@ -1,0 +1,62 @@
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: dimgrey;
+   color: white;
+   text-align: center;
+}
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  text-align: center;
+  position: absolute;
+  bottom: 550px;
+  right: .1px;
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.reviews{
+  text-align: center;
+}
+
+.masonry { /* Masonry container */
+    column-count: 4;
+    column-gap: 1em;
+}
+
+.masonry2 {
+  column-count: 3;
+  column-gap: 1em;
+}
+
+.item { /* Masonry bricks or child elements */
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+.image{
+  width = 100%;
+}
+
+
+section {
+ display: flex;
+}
+aside {
+ flex: 1;
+}
+
+article {
+ flex: 4;
+ text-align:center;
+}
