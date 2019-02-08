@@ -14,8 +14,12 @@ fetch(url)
       for (let i=0; i < json.weather.length; i++) {
 	results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
       }
-      results += '<h2>' + json.main.temp + " &deg;F</h2>"
+      results += '<p>Current Temperature: ' + json.main.temp + " &deg;F</p>"
+      results += '<p>Temperature Low: ' + json.main.temp_min + " &deg;F</p>";
+      results += '<p>Temperature High: ' + json.main.temp_max + " &deg;F</p>";
       results += "<p>"
+      results += "<p>Pressure: " + json.main.pressure + " atm</p>";
+      results += "<p>Humidity: " + json.main.humidity + "%</p>";
       for (let i=0; i < json.weather.length; i++) {
 	results += json.weather[i].description
 	if (i !== json.weather.length - 1)
@@ -30,10 +34,9 @@ fetch(url)
       return response.json();
     }).then(function(json) {
       let forecast = "";
+      forecast += '<h2 style= "font-family:Major Mono Display">Forecast</h2>' + '<br>';
       for (let i=0; i < json.list.length; i++) {
-        forecast += "<h2>" + moment(json.list[i].dt_txt).format('MMMM Do YYYY, h:mm:ss a') + "</h2>";
-        forecast += "<p>Temperature: " + json.list[i].main.temp + "</p>";
-        forecast += '<img src="http://openweathermap.org/img/w/' + json.list[i].weather[0].icon + '.png"/>'
+        forecast += "<p>" + moment(json.list[i].dt_txt).format('MMMM Do YYYY, h:mm:ss a') + "    ◦     Temperature: " + json.list[i].main.temp + "&deg;F    ◦     Humidity: " + json.list[i].main.humidity + "%         " + '<img src="http://openweathermap.org/img/w/' + json.list[i].weather[0].icon + '.png"/>' + "</p>";
       }
       document.getElementById("forecastResults").innerHTML = forecast;
     });

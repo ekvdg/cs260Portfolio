@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+      <link rel="shortcut icon" type="image/x-icon" href="images/sun.jpeg" />
       <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8"/>
     <script src="script.js"></script>
@@ -12,20 +12,39 @@
   <body>
 
 
-    <h1>Weather Report</h1>
-
+    <h1 class = "box">Weather Report</h1>
     <form>
-  <label class = "center">Enter a U.S. city</label>
+      <br>
+      <br>
+      <div id = "myBox">
+  <label>Enter a U.S. city to see its weather</label>
+
   <input class = "center" id="weatherInput" type="text"></input><br/>
-  <input class = "center" id="weatherSubmit" type="submit" value="Go"></input>
-  </form>
-  <div class = "center" id="weatherResults">
+  <label class = "pad">
+  <input id="weatherSubmit" type="submit" value="Go" align="right"></input>
+  </label>
   </div>
-  <div class = "center" id="forecastResults">
-	</div>
+  </form>
+
+<br><br>
+
+  <div class="row">
+    <div class="column2">
+      <div class = "center" id="weatherResults">
+      </div>
+    </div>
+
+    <div class="column2">
+        <div class = "center" id="forecastResults">
+
+      </div>
+    </div>
+
+  </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
-    <script text="type/javascript" src="/script.js">
+    <script text="type/javascript" src="script.js">
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

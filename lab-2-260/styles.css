@@ -10,3 +10,65 @@ font-family: Major Mono Display;
   text-align:center;
 
 }
+#weatherResults h2{
+  font-family: Major Mono Display;
+}
+#weatherInput .font{
+  font-family: Major Mono Display;
+}
+.column2{
+  float: center;
+  width: 50%;
+}
+.column3{
+  float:center;
+  width: 33%;
+}
+label{
+  padding-left: 23%;
+}
+.pad{
+  padding-left: 45%;
+}
+
+.box {
+  background-color: lightblue;
+  width: 100%;
+}
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.textbox{
+  text-align: center;
+  background-color: lightgrey;
+  width: 25%;
+  height: 25%;
+
+}
+#myBox{
+  margin: auto;
+  background-color: lightgrey;
+  width: 55%;
+  padding: 10px;
+}
