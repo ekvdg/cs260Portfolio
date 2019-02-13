@@ -1,0 +1,60 @@
+label{
+  font-size: 20px;
+}
+body{
+  padding-bottom: 15%;
+  background-color: antiquewhite;
+}
+h1{
+text-align: center;
+font-family: Staatliches;
+}
+p{
+  font-family: PT Sans Narrow;
+  text-align: center;
+  font-size: 35px;
+}
+.center{
+  text-align:center;
+
+}
+.column2{
+  float: center;
+  width: 50%;
+}
+.column3{
+  float:center;
+  width: 33%;
+}
+label{
+  padding-left: 23%;
+}
+.pad{
+  padding-left: 45%;
+}
+
+.box {
+  background-color: lightgreen;
+  width: 100%;
+}
+.box2 {
+  margin: auto;
+  background-color: white;
+  width: 50%;
+  padding: 10px;
+}
+
+.textbox{
+  text-align: center;
+  background-color: lightgrey;
+  border-style: double;
+  width: 25%;
+  height: 25%;
+
+}
+#myBox{
+  margin: auto;
+  background-color: lightgrey;
+  width: 55%;
+  padding: 2px;
+}

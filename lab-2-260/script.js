@@ -21,10 +21,10 @@ fetch(url)
       results += "<p>Pressure: " + json.main.pressure + " atm</p>";
       results += "<p>Humidity: " + json.main.humidity + "%</p>";
       for (let i=0; i < json.weather.length; i++) {
-	results += json.weather[i].description
-	if (i !== json.weather.length - 1)
-	  results += ", "
-      }
+	       results += json.weather[i].description
+	        if (i !== json.weather.length - 1)
+	           results += ", "
+        }
       results += "</p>";
       document.getElementById("weatherResults").innerHTML = results;
   });

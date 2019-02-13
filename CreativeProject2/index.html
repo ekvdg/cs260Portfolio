@@ -2,44 +2,28 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-      <link rel="shortcut icon" type="image/x-icon" href="images/sun.jpeg" />
-      <link rel="stylesheet" href="styles.css">
+      <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+      <link rel="shortcut icon" type="image/x-icon" href="note.png" />
+      <link rel="stylesheet" href="style.css">
     <meta charset="utf-8"/>
-    <script src="script.js"></script>
-    <title>MyWeather</title>
+    <title>Lyric Lookup</title>
   </head>
   <body>
 
 
-    <h1 class = "box">Weather Report</h1>
-    <form>
-      <br>
-      <br>
-      <div id = "myBox">
-  <label>Enter a U.S. city to see its weather</label>
-
-  <input class = "center" id="weatherInput" type="text"></input><br/>
-  <label class = "pad">
-  <input id="weatherSubmit" type="submit" value="Go" align="right"></input>
-  </label>
-  </div>
-  </form>
-
+    <h1 class = "box">Lyric Lookup</h1>
+    <h4 style = "text-align:center">Enter an artist or band name and the title of one of their songs and get the lyrics</h4>
+<div class = "center">
+<input class="input border" type="text" placeholder=" Artist Name" name="title" id="searchField" required><br>
+<input class="input border" type="text" placeholder=" Song Name" name="year" id="searchFieldYear" required><br>
+<input id="songSubmit" type="submit" value="Go" align="right"></input>
 <br><br>
-
-  <div class="row">
-    <div class="column2">
-      <div class = "center" id="weatherResults">
-      </div>
+<div class = "box2">
+  <p>Lyrics<p>
+  <div class = "center" id="songResults">
     </div>
-
-    <div class="column2">
-        <div class = "center" id="forecastResults">
-
-      </div>
-    </div>
-
+  </div>
   </div>
 
 
@@ -53,7 +37,7 @@
     </body>
     <footer class="page-footer font-small bg-dark fixed-bottom">
     <div class="text-white text-center py-3">Ellie Van De Graaff
-    <a href="https://github.com/BYU-CS-260-Winter-2019/lab-2-ekvdg"> Github Repository</a>
+    <a href="https://github.com/ekvdg/cs260Portfolio/tree/master/CreativeProject2"> Github Repository</a>
     </div>
     </footer>
 </html>
