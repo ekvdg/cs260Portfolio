@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/glasses.png" />
+  <link rel="stylesheet" href="css/master.css" />
+  <title>Geeky Getaway</title>
+</head>
+
+<body class="light-grey">
+  <div id="app">
+    <!-- Nav Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark text-white" style="background-color: #7840AF;">
+      <a class="navbar-brand" href="#">Geeky Getaway</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active"><i class="fa fa-shopping-cart"></i> ({{cartAmount}})  Total Price: ${{totalPrice}}<span class = "sr-only">(current)></a>
+          </div>
+        </div>
+      </nav>
+
+      <!--Content-->
+      <br><br><br><br>
+
+      <div class="row-padding">
+        <div class="third display-container margin-bottom">
+          <img src="images/shirt1.jpg" style="width:100%">
+          <div class="display-upper-middle display-hover">
+            <button v-on:click="addToCart(0)" class="button black extra_padding">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="display-lower-middle display-hover">
+            <button v-on:click="deleteFromCart(0)" class="button black margin-top">Delete from cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="container white">
+            <p><b>Atom Shirt</b></p>
+            <p>$19.99</p>
+          </div>
+        </div>
+
+        <div class="third display-container margin-bottom">
+          <img src="images/shirt2.png" style="width:100%">
+          <div class="display-upper-middle display-hover">
+            <button v-on:click="addToCart(1)" class="button black extra_padding">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="display-lower-middle display-hover">
+            <button v-on:click="deleteFromCart(1)" class="button black margin-top">Delete from cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="container white">
+            <p><b>Git Shirt</b></p>
+            <p>$24.99</p>
+          </div>
+        </div>
+
+        <div class="third display-container margin-bottom">
+          <img src="images/shirt3.jpg" style="width:100%">
+          <div class="display-upper-middle display-hover">
+            <button v-on:click="addToCart(2)" class="button black extra_padding">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="display-lower-middle display-hover">
+            <button v-on:click="deleteFromCart(2)" class="button black margin-top">Delete from cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="container white">
+            <p><b>Function shirt</b></p>
+            <p>$14.99</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-padding">
+        <div class="third display-container margin-bottom">
+          <img src="images/shirt4.jpeg" style="width:100%">
+          <div class="display-upper-middle display-hover">
+            <button v-on:click="addToCart(3)" class="button black extra_padding">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="display-lower-middle display-hover">
+            <button v-on:click="deleteFromCart(3)" class="button black margin-top">Delete from cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="container white">
+            <p><b>Binary shirt</b></p>
+            <p>$29.99</p>
+          </div>
+        </div>
+
+        <div class="third display-container margin-bottom">
+          <img src="images/shirt5.jpg" style="width:100%">
+          <div class="display-upper-middle display-hover">
+            <button v-on:click="addToCart(4)" class="button black extra_padding">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="display-lower-middle display-hover">
+            <button v-on:click="deleteFromCart(4)" class="button black margin-top">Delete from cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="container white">
+            <p><b>Algebra Shirt</b></p>
+            <p>$14.99</p>
+          </div>
+        </div>
+
+        <div class="third display-container margin-bottom">
+          <img src="images/shirt6.jpg" style="width:100%">
+          <div class="display-upper-middle display-hover">
+            <button v-on:click="addToCart(5)" class="button black extra_padding">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="display-lower-middle display-hover">
+            <button v-on:click="deleteFromCart(5)" class="button black margin-top">Delete from cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="container white">
+            <p><b>Programming Languages Shirt</b></p>
+            <p>$19.99</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-padding">
+        <div class="third display-container margin-bottom">
+          <img src="images/shirt7.jpg" style="width:100%">
+          <div class="display-upper-middle display-hover">
+            <button v-on:click="addToCart(6)" class="button black extra_padding">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="display-lower-middle display-hover">
+            <button v-on:click="deleteFromCart(6)" class="button black margin-top">Delete from cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="container white">
+            <p><b>HTML Shirt</b></p>
+            <p>$14.99</p>
+          </div>
+        </div>
+
+        <div class="third display-container margin-bottom">
+          <img src="images/shirt8.jpg" style="width:100%">
+          <div class="display-upper-middle display-hover">
+            <button v-on:click="addToCart(7)" class="button black extra_padding">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="display-lower-middle display-hover">
+            <button v-on:click="deleteFromCart(7)" class="button black margin-top">Delete from cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="container white">
+            <p><b>CSS Shirt</b></p>
+            <p>$19.99</p>
+          </div>
+        </div>
+
+        <div class="third display-container margin-bottom">
+          <img src="images/shirt9.jpg" style="width:100%">
+          <div class="display-upper-middle display-hover">
+            <button v-on:click="addToCart(8)" class="button black extra_padding">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="display-lower-middle display-hover">
+            <button v-on:click="deleteFromCart(8)" class="button black margin-top">Delete from cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <div class="container white">
+            <p><b>Pi Shirt</b></p>
+            <p>$14.99</p>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+
+
+    </div>
+  </body>
+  <!--Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script text="type/javascript" src="script.js"></script>
+  <!-- Footer -->
+  <footer class="page-footer font-small bg-dark text-white fixed-bottom">
+
+    <div class="footer-copyright text-center py-3">Created by Ellie Van De Graaff & Zack Moss<br>GitHub: <a href="https://github.com/zmoss97/CreativeProject2">Creative Project 3</a></div>
+
+  </footer>
+  <!-- Footer -->
+  </html>
