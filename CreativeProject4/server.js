@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-app.use(express.static('Public'));
+//app.use(express.static('Public'));
 
 
 mongoose.connect('mongodb://localhost:27017/cart', {
@@ -87,4 +87,4 @@ app.put('/api/items/:id', async(req, res) =>{
 });
 
 
-app.listen(3000, () => console.log('Server listening on port 3000!'));
+app.listen(8080, () => console.log('Server listening on port 8080!'));

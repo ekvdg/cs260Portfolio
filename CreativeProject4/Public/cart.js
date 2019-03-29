@@ -13,7 +13,8 @@ var app = new Vue({
     },
     totalPrice(){
       if(this.items.length === 0) {return 0;}
-      return this.items.reduce((total,item) => {return total += (item.quantity * item.price)}, 0);
+      let totalAmount = this.items.reduce((total,item) => {return total += (item.quantity * item.price)}, 0);
+      return Math.round(totalAmount * 100) / 100;
     }
   },
   methods: {
