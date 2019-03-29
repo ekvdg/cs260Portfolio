@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/glasses.png" />
+  <link rel="stylesheet" href="css/master.css" />
+  <title>Geeky Getaway</title>
+</head>
+
+<body class="light-grey">
+  <div id="cart">
+    <!-- Nav Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark text-white" style="background-color: #7840AF;">
+      <a class="navbar-brand" href="#">Geeky Getaway</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="cart.html"><i class="fa fa-shopping-cart"></i> ({{cartAmount}}) <span class = "sr-only">(current)></a>
+          </div>
+        </div>
+      </nav>
+
+      <!--Content-->
+      <br><br><br><br>
+
+      <li v-for="item in items">
+        <div id class="container menu padding-32 white">
+
+          <h1><b>{{item.name}}</b>
+            <span class="right tag dark-grey round">${{item.price * item.quantity}}</span>
+            <br><br>
+            <span class="right">
+              <button v-on:click="addToQuantity(item.id)"><i class="fa fa-arrow-circle-up"></i></button>
+              <button v-on:click="removeFromQuantity(item.id)"><i class="fa fa-arrow-circle-down"></i></button>
+              <button v-on:click="deleteItem(item.id)"><i class="fa fa-trash"></i></button>
+            </span>
+          </h1>
+          <p class="text-grey">Quantity: {{item.quantity}}</p>
+        </div>
+      </li>
+
+      <br>
+      <div class="container menu padding-32 white">
+        <h1><b>Total Price: ${{totalPrice}}</b></h1>
+      </div>
+
+
+      <br><br><br><br>
+
+
+    </div>
+  </body>
+  <!--Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script text="type/javascript" src="cart.js"></script>
+  <!-- Footer -->
+  <footer class="page-footer font-small bg-dark text-white fixed-bottom">
+
+    <div class="footer-copyright text-center py-3">Created by Ellie Van De Graaff & Zack Moss<br>GitHub: <a href="https://github.com/zmoss97/CreativeProject4">Creative Project 4</a></div>
+
+  </footer>
+  <!-- Footer -->
+  </html>
